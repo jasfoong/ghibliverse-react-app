@@ -12,19 +12,34 @@ function HomePage() {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchCharacters = async () => {
-      const getCharactersApi = new CharactersApi('http://localhost:8080/');
+    const getCharactersApi = new CharactersApi('http://localhost:8080/');
 
-      try {
-        const response = await getCharactersApi.getCharacters();
-        setCharacters(response.data);
+    if (!id) {
+      const fetchCharacters = async () => {
 
-      } catch (error) {
-        console.error("Only susuwatari here", error);
-        setHasFetchError(true);
+        try {
+          const response = await getCharactersApi.getCharacters();
+          setCharacters(response.data);
+
+        } catch (error) {
+          console.error("Only susuwatari here", error);
+          setHasFetchError(true);
+        }
+      };
+      fetchCharacters();
+
+    } else {
+      const fetchSelectedCharacter = async () => {
+          try {
+              const response = await getCharactersApi.getSelectedCharacter(id);
+              setCharacters(response.data);
+          } catch (error) {
+              console.error("Only susuwatari here", error);
+              setHasFetchError(true)
+          }
       }
-    };
-    fetchCharacters();
+      fetchSelectedCharacter();
+  } 
   }, [id])
 
   if (hasFetchError === true) {
