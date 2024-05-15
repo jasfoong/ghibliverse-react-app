@@ -1,0 +1,15 @@
+@use '../../styles/typography' as *;
+@use '../../styles/colors' as *;
+
+.header {
+    background-color: $light-pink;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 4% 0;
+
+    &__title {
+        color: $blue;
+    }
+}
+
