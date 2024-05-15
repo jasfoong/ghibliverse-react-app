@@ -1,9 +1,13 @@
-import logo from './logo.svg';
 import './App.scss';
+import Header from './components/Header/Header'
+import Character from './components/Character/Character'
 
 function App() {
   return (
-    <h1>Hello this is my react app</h1>
+    <>
+      <Header />
+      <Character />
+    </>
   );
 }
 
