@@ -2,7 +2,7 @@ import './Characters.scss'
 import haku from '../../assets/images/haku.jpeg'
 import { Link } from 'react-router-dom'
 
-const CharacterList = () => {
+const CharacterList = ({ characters }) => {
     return (
         <main className="characters">
             {/* <Link className="characters__link" to={`/characters/${character.id}`} key={character.id}> */}
