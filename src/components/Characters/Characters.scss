@@ -3,9 +3,17 @@
 
 .characters {
     background-image: url('../../assets/images/howl040.jpeg');
-    background-size: cover;
-    height: 80vh;
+    background-size: auto 100%;
+    overflow: scroll;
+    height: 100vh;
     padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__link {
+        text-decoration: none;
+    }
 
     &__card {
         border: 1px solid $dark-green;
@@ -16,7 +24,12 @@
         background-size: cover;
         cursor: pointer;
         padding: 1.5rem;
-        margin: 0 1.5rem;
+        margin: 1.5rem;
+        transition: width 0.5s ease-in-out;
+
+        &:hover {
+            width: 30vw;
+        }
     }
 
     &__image {
@@ -24,40 +37,48 @@
         width: inherit;
         border-radius: 5px;
         box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.2);
+        border: 1px solid $dark-green;
     }
 
     &__name {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 
     &__age {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 
     &__species {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 
     &__powers {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 
     &__movie {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 
     &__description {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 
     &__extended-description {
         color: $dark-green;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 }
