@@ -13,7 +13,7 @@ function HomePage() {
 
   useEffect(() => {
     const fetchCharacters = async () => {
-      const getCharactersApi = new CharactersApi();
+      const getCharactersApi = new CharactersApi('http://localhost:8080/');
 
       try {
         const response = await getCharactersApi.getCharacters();
