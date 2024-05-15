@@ -2,7 +2,7 @@
 @use '../../styles/colors' as *;
 
 .header {
-    background-color: $light-pink;
+    background-image: linear-gradient($yellow, $light-pink);
     height: 5rem;
     display: flex;
     justify-content: center;
