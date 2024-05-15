@@ -5,7 +5,7 @@
     background-image: url('../../assets/images/howl040.jpeg');
     background-size: cover;
     height: 80vh;
-    // opacity: 0.75;
+    padding: 1.5rem;
 
     &__card {
         border: 1px solid $dark-green;
@@ -36,12 +36,27 @@
         font-size: 1.25rem;
     }
 
-    &__short-description {
+    &__species {
         color: $dark-green;
         font-size: 1.25rem;
     }
 
-    &__long-description {
+    &__powers {
+        color: $dark-green;
+        font-size: 1.25rem;
+    }
+
+    &__movie {
+        color: $dark-green;
+        font-size: 1.25rem;
+    }
+
+    &__description {
+        color: $dark-green;
+        font-size: 1.25rem;
+    }
+
+    &__extended-description {
         color: $dark-green;
         font-size: 1.25rem;
     }

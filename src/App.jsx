@@ -1,13 +1,15 @@
 import './App.scss';
-import Header from './components/Header/Header'
-import Characters from './components/Characters/Characters'
+import HomePage from './pages/HomePage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-      <Header />
-      <Characters />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/:id" element={<HomePage />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
